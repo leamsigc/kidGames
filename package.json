@@ -1,0 +1,26 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.11.4",
+    "@astrojs/partytown": "^1.0.1",
+    "@astrojs/prefetch": "^0.1.0",
+    "@astrojs/tailwind": "^2.1.1",
+    "@astrojs/vue": "^1.2.1",
+    "astro": "^1.5.2",
+    "astro-compress": "^1.0.12",
+    "astro-imagetools": "^0.6.11",
+    "astro-seo": "^0.6.0",
+    "tailwindcss": "^3.0.24",
+    "vue": "^3.2.30"
+  }
+}
