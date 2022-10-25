@@ -2,19 +2,31 @@
 // 1. The frontmatter prop gives access to frontmatter and other data
 const { frontmatter } = Astro.props;
 import Header from "../components/Header.astro";
+import { SEO } from "astro-seo";
+
+const seoItem = {
+  basic: {
+    title:frontmatter.title,
+    type: "",
+    image: frontmatter.image.url,
+    url: frontmatter.image.url
+  },
+};
 ---
 
 <html>
   <head>
     <!-- Add other Head elements here, like styles and meta tags. -->
-    <title>{frontmatter.title}</title>
+    <SEO
+      title={frontmatter.title}
+      description={frontmatter.description}
+      openGraph={seoItem}
+    />
   </head>
   <body>
     <Header />
-    <!-- Add other UI components here, like common headers and footers. -->
-    <h1>{frontmatter.title} by {frontmatter.author}</h1>
-    <!-- 2. Rendered HTML will be passed into the default slot. -->
-    <slot />
-    <p>Written on: {frontmatter.date}</p>
+    <div class="max-w-5xl mx-auto prose my-16">
+      <slot />
+    </div>
   </body>
 </html>
